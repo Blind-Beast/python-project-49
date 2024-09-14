@@ -17,7 +17,7 @@ def progress(a, b, c):
 
 def main():
     user_name = brain_games.cli.welcome_user()
-    print("Find the greatest common divisor of given numbers.")
+    print("What number is missing in the progression?")
     good_tries = 0
     while good_tries < 3:
         first_number = randint(1, 10)
