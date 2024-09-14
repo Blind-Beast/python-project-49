@@ -28,6 +28,7 @@ def main():
             good_tries += 1
             print('Correct!')
         else:
+            good_tries = 0
             print(f'{answer} is wrong answer ;(. Correct answer was {result}')
             print(f'Let\'s try again, {user_name}!')
 

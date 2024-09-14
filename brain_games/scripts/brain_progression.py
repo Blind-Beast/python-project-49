@@ -5,13 +5,14 @@ import brain_games.cli
 from random import randint
 
 
-def gcd(a, b):
-    while a != b:
-        if a > b:
-            a = a - b
-        else:
-            b = b - a
-    return b
+def progress(a, b, c):
+    i = 0
+    prog = []
+    while i < c:
+        prog.append(a)
+        i += 1
+        a = a + b
+    return prog
 
 
 def main():
@@ -19,10 +20,15 @@ def main():
     print("Find the greatest common divisor of given numbers.")
     good_tries = 0
     while good_tries < 3:
-        first_number = randint(1, 100)
-        second_number = randint(1, 100)
-        result = str(gcd(first_number, second_number))
-        print(f'Question: {first_number} {second_number}')
+        first_number = randint(1, 10)
+        step = randint(1, 10)
+        prog_len = randint(5, 10)
+        prog = progress(first_number, step, prog_len)
+        rand_num = randint(0, prog_len - 1)
+        result = str(prog[rand_num])
+        prog[rand_num] = '..'
+        prog_str = ' '.join(str(el) for el in prog)
+        print(f'Question: {prog_str}')
         answer = prompt.string('Your answer: ')
         if answer == result:
             good_tries += 1
