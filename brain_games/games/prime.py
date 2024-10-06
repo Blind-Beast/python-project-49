@@ -7,7 +7,7 @@ GAME_QUESTION = "Answer \"yes\" if given number is prime."\
 def is_prime(number):
     """Return True for prime number, otherwise return False"""
     if number == 1:
-        return True
+        return False
     for i in range(2, number // 2 + 1):
         if number % i == 0:
             return False
