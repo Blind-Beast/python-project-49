@@ -9,14 +9,11 @@ def calculate_result(first_operand, second_operand, operator):
     match operator:
         case '+':
             result = first_operand + second_operand
-            question = f'Question: {first_operand} + {second_operand}'
         case '-':
             result = first_operand - second_operand
-            question = f'Question: {first_operand} - {second_operand}'
         case '*':
             result = first_operand * second_operand
-            question = f'Question: {first_operand} * {second_operand}'
-    return result, question
+    return result
 
 
 def find_result():
@@ -24,5 +21,6 @@ def find_result():
     first_number = randint(1, 100)
     second_number = randint(1, 100)
     operator = choice(['+', '-', '*'])
-    result, question = calculate_result(first_number, second_number, operator)
+    question = f'{first_number} {operator} {second_number}'
+    result = calculate_result(first_number, second_number, operator)
     return result, question

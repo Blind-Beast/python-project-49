@@ -23,6 +23,5 @@ def find_result():
     rand_num = randint(0, prog_len - 1)
     result = prog[rand_num]
     prog[rand_num] = '..'
-    prog_str = ' '.join(str(el) for el in prog)
-    question = f'Question: {prog_str}'
+    question = ' '.join(str(el) for el in prog)
     return result, question

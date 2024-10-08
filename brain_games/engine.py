@@ -10,7 +10,7 @@ def start_game(game):
     good_tries = 0
     while good_tries < 3:
         result, question = game.find_result()
-        print(question)
+        print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
         if answer == str(result):
             good_tries += 1
@@ -21,6 +21,6 @@ def start_game(game):
     if good_tries == 3:
         print(f'Congratulations, {user_name}!')
     else:
-        print(f'\'{answer}\' is wrong answer ;(. Correct answer '
-              f'was \'{result}\'')
-        print(f'Let\'s try again, {user_name}!')
+        print(f"'{answer}' is wrong answer ;(. Correct answer "
+              f"was '{result}'")
+        print(f"Let's try again, {user_name}!")

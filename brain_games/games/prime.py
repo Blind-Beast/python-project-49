@@ -18,10 +18,6 @@ def is_prime(number):
 
 def find_result():
     """Return correct answer and question for the game"""
-    random_number = randint(1, 100)
-    question = f'Question: {random_number}'
-    if is_prime(random_number) is False:
-        result = 'no'
-    else:
-        result = 'yes'
+    question = randint(1, 100)
+    result = 'yes' if is_prime(question) else 'no'
     return result, question

@@ -13,10 +13,6 @@ def is_even(number):
 
 def find_result():
     """Return correct answer and question for the game"""
-    random_number = randint(1, 100)
-    question = f'Question: {random_number}'
-    if is_even(random_number) is True:
-        result = 'yes'
-    else:
-        result = 'no'
+    question = randint(1, 100)
+    result = 'yes' if is_even(question) else 'no'
     return result, question
